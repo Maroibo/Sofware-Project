@@ -1,0 +1,93 @@
+[
+    {
+        "_username": "org1",
+        "_password": "password1",
+        "_email": "org1@example.com",
+        "_user_id": 1,
+        "_organizer_name": "Organizer1",
+        "_organizer_id": 100,
+        "_conference_list": [
+        ]
+    },
+    {
+        "_username": "org2",
+        "_password": "password2",
+        "_email": "org2@example.com",
+        "_user_id": 2,
+        "_organizer_name": "Organizer2",
+        "_organizer_id": 101,
+        "_conference_list": []
+    },
+    {
+        "_username": "org3",
+        "_password": "password3",
+        "_email": "org3@example.com",
+        "_user_id": 3,
+        "_organizer_name": "Organizer3",
+        "_organizer_id": 102,
+        "_conference_list": []
+    },
+    {
+        "_username": "org4",
+        "_password": "password4",
+        "_email": "org4@example.com",
+        "_user_id": 4,
+        "_organizer_name": "Organizer4",
+        "_organizer_id": 103,
+        "_conference_list": []
+    },
+    {
+        "_username": "org5",
+        "_password": "password5",
+        "_email": "org5@example.com",
+        "_user_id": 5,
+        "_organizer_name": "Organizer5",
+        "_organizer_id": 104,
+        "_conference_list": []
+    },
+    {
+        "_username": "org6",
+        "_password": "password6",
+        "_email": "org6@example.com",
+        "_user_id": 6,
+        "_organizer_name": "Organizer6",
+        "_organizer_id": 105,
+        "_conference_list": []
+    },
+    {
+        "_username": "org7",
+        "_password": "password7",
+        "_email": "org7@example.com",
+        "_user_id": 7,
+        "_organizer_name": "Organizer7",
+        "_organizer_id": 106,
+        "_conference_list": []
+    },
+    {
+        "_username": "org8",
+        "_password": "password8",
+        "_email": "org8@example.com",
+        "_user_id": 8,
+        "_organizer_name": "Organizer8",
+        "_organizer_id": 107,
+        "_conference_list": []
+    },
+    {
+        "_username": "org9",
+        "_password": "password9",
+        "_email": "org9@example.com",
+        "_user_id": 9,
+        "_organizer_name": "Organizer9",
+        "_organizer_id": 108,
+        "_conference_list": []
+    },
+    {
+        "_username": "org10",
+        "_password": "password10",
+        "_email": "org10@example.com",
+        "_user_id": 10,
+        "_organizer_name": "Organizer10",
+        "_organizer_id": 109,
+        "_conference_list": []
+    }
+]

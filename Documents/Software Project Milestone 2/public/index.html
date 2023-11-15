@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizer Login</title>
+    <!-- Import tailwind -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.6.2/tailwind.min.css">
+    <!-- Import custom css -->
+</head>
+<body class="flex justify-center items-center bg-blue-500">
+    <div class="flex justify-center items-center bg-white border rounded-lg">
+        <div class="flex flex-col justify-center items-center h-55vh w-80vw box-shadow p-10 max-w-600px border rounded-lg">
+          <h1 class="text-center text-slategray text-4xl font-bold leading-2.5rem">Organizer Login</h1>
+          <div class="flex flex-col items-center -mr-1.5 mt-4 h-12">
+            <input type="username" id="username" class="text-center text-gray-600 text-2xl leading-10 max-w-lg bg-gray-300 pl-2 pr-1.5 pt-1.5 pb-2  border-0 rounded-lg" placeholder="Username" />
+          </div>
+          <div class="flex flex-col items-center -mr-1.5 mt-4 h-12">
+            <input type="password" id="password" class="text-center text-gray-600 text-2xl leading-10 max-w-lg bg-gray-300 pl-2 pr-1.5 pt-1.5 pb-2 border-0 rounded-lg" placeholder="password" />
+          </div>
+          <div class="flex flex-col items-center -mr-1.5 mt-6 h-14">
+            <button id="login-button"  class="text-center text-blue-500 text-2xl h-12 hover:bg-blue-500 hover:text-yellow-300 duration-100 font-bold leading-8 max-w-xl bg-yellow-300 p-2.5 border-0 rounded-lg w-40">Login</button>
+          </div>
+        </div>
+      </div>
+      <!-- Import the script file and add the defer attr -->
+        <script src="./script.js" type="module" defer></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Registration</title>
+    <!-- Import tailwind -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.6.2/tailwind.min.css">
+    <!-- Import custom css -->
+</head>
+<body class="flex justify-center items-center bg-blue-500" style="height: 100vh;">
+    <div class="bg-white p-2 font-bold text-4xl text-center absolute border cursor-pointer rounded-lg" style="top:2rem; left: 2rem;" id="logout">Logout</div>
+    <div class="flex justify-center items-center bg-white border rounded-lg">
+        <div class="flex flex-col justify-center items-center h-55vh w-80vw box-shadow p-10 max-w-600px border rounded-lg">
+            <h1 class="text-center text-slategray text-4xl font-bold leading-2.5rem">Conference Registration</h1>
+            <div class="flex flex-col items-center mt-4">
+                <input type="text" id="conferenceName" class="text-center text-gray-600 text-2xl leading-10 max-w-lg bg-gray-300 pl-2 pr-1.5 pt-1.5 pb-2  border-0 rounded-lg" placeholder="Conference Name" />
+            </div>
+            <div class="flex flex-col items-center mt-4">
+                <label for="date" class="text-darkgray text-lg">Date:</label>
+                <input type="date" id="date" class="input-field" />
+            </div>
+            <div class="flex flex-col items-center mt-4">
+                <label for="venue" class="text-darkgray text-lg">List of Venues:</label>
+                <textarea id="venue" class="text-center text-gray-600 text-2xl leading-10 max-w-lg bg-gray-300 pl-2 pr-1.5 pt-1.5 pb-2  border-0 rounded-lg" rows="4" placeholder="Enter the list of Venues"></textarea>
+            </div>
+            <div class="flex flex-col items-center mt-4">
+                <label for="reviewers" class="text-darkgray text-lg">List of Reviewers:</label>
+                <textarea id="reviewers" class="text-center text-gray-600 text-2xl leading-10 max-w-lg bg-gray-300 pl-2 pr-1.5 pt-1.5 pb-2  border-0 rounded-lg" rows="4" placeholder="Enter reviewers' names"></textarea>
+            </div>
+            <div class="flex flex-col items-center mt-6">
+                <button id="register-button" class="text-center text-blue-500 text-2xl h-12 hover:bg-blue-500 hover:text-yellow-300 duration-100 font-bold leading-8 max-w-xl bg-yellow-300 p-2.5 border-0 rounded-lg w-64">Register Conference</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script2.js" type="module" defer></script>
+</body>
+</html>
