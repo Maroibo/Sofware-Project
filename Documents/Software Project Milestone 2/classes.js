@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-
+import crypto from 'crypto';
 export class User {
     constructor(username, password, email) {
         this._username = username;
@@ -165,3 +165,8 @@ export class Conference {
         return Object.assign(conference, json);
     }
 }
+export function hashPassword(password) {
+    const hash = crypto.createHash('sha256');
+    hash.update(password);
+    return hash.digest('hex');
+  }

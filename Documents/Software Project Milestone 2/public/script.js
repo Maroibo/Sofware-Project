@@ -1,22 +1,13 @@
 
-// I need a User class with a constructor that takes a username and password.
-// attrs: username, password, email , user_id with setter and getter methods
-
-
-
-
-
-// add an event listener to the login button
-// get the username and password from the input fields
-// send a request to the server to check if the user is valid
-// if the user is valid, log it to the console
 const loginButton = document.getElementById('login-button');
 loginButton.addEventListener('click', async () => {
     const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    let password = document.getElementById('password').value;
+    password = await hashPassword(password);
     const response = await fetch(`/login?username=${username}&password=${password}`);
     const data = await response.json();
     const organizer = data.oraganizer;
+    // check if the user is valid
     if (data.valid) {
         // remove the email and the password from the object
         delete data.organizer._password;
@@ -32,4 +23,18 @@ loginButton.addEventListener('click', async () => {
         alert('Invalid username or password');
     }
 });
+
+async function hashPassword(password) {
+    // Convert the password to a Uint8Array
+    const encoder = new TextEncoder();
+    const data = encoder.encode(password);
+  
+    // Hash the password using the SubtleCrypto API
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  
+    // Convert the hash to a hexadecimal string
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+    return hashHex;
+  }
 

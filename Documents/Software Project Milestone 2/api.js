@@ -54,13 +54,34 @@ app.put('/conference', async (req, res) => {
     let { conference,  organizer } = req.body;
     const newConference = new classes.Conference(conference.conference_name, conference.date, conference.venue, conference.reviewers_list);
     const conferences = await readConferences();
-    conferences.push(newConference);
-    await fs.writeFile('./public/conferences.json', JSON.stringify(conferences, null, 4));
-    
+    // validate if the conference name already exists in the database replace the conference object
     const organizers = await readOrganizers();
+    const index = conferences.findIndex(c => c._conference_name === conference.conference_name);
     let currentOrganizer = organizers.find(o => o._username === organizer._username);
     currentOrganizer=classes.Organizer.fromJSON(currentOrganizer);
+    if (index !== -1) {
+        conferences[index] = newConference;
+        // find the organizer with a conference the matches the conference name
+        const conferenceOrganizer = organizers.find(o => o._conference_list.some(c => c._conference_name === conference.conference_name));
+        // if the organizer is the same as the current organizer update the conference list
+        if (conferenceOrganizer._username === organizer._username) {
+            const conferenceIndex = conferenceOrganizer._conference_list.findIndex(c => c._conference_name === conference.conference_name);
+            conferenceOrganizer._conference_list[conferenceIndex] = newConference;
+            const organizerIndex = organizers.findIndex(o => o._username === organizer._username);
+            organizers[organizerIndex] = conferenceOrganizer;
+        } else {
+            // if the organizer is different remove the conference from the old organizer and add it to the new one
+            const conferenceIndex = conferenceOrganizer._conference_list.findIndex(c => c._conference_name === conference.conference_name);
+            conferenceOrganizer._conference_list.splice(conferenceIndex, 1);
+            const organizerIndex = organizers.findIndex(o => o._username === conferenceOrganizer._username);
+            organizers[organizerIndex] = conferenceOrganizer;
+            currentOrganizer.registerConference(newConference);
+        }
+    } else {
+    conferences.push(newConference);
     currentOrganizer.registerConference(newConference);
+    }
+    await fs.writeFile('./public/conferences.json', JSON.stringify(conferences, null, 4)); 
     await fs.writeFile('./public/organizers.json', JSON.stringify(organizers, null, 4));
 
     res.json({
