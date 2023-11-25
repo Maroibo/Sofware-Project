@@ -40,7 +40,7 @@ app.get('/login', async (req, res) => {
             validUser=true
         }
     });
-    const organizer = organizers.find(organizer => organizer._username === username);
+    const organizer = organizers.find(organizer => organizer._username === username&&organizer._password === password);
 
     if (organizer) {
         res.json({ valid: validUser, organizer: organizer });

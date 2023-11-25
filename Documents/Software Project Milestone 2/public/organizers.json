@@ -1,102 +1,93 @@
 [
-  {
-    "_username": "org1",
-    "_password": "0b14d501a594442a01c6859541bcb3e8164d183d32937b851835442f69d5c94e",
-    "_email": "org1@example.com",
-    "_user_id": 1,
-    "_organizer_name": "Organizer1",
-    "_organizer_id": 100,
-    "_conference_list": [],
-    "password": "9b29b1d990ae54e3154843982ded7e6a11f161e454ddf94b82b7849584c92e28"
-  },
-  {
-    "_username": "org2",
-    "_password": "6cf615d5bcaac778352a8f1f3360d23f02f34ec182e259897fd6ce485d7870d4",
-    "_email": "org2@example.com",
-    "_user_id": 2,
-    "_organizer_name": "Organizer2",
-    "_organizer_id": 101,
-    "_conference_list": [],
-    "password": "28a62edee56dce6d5e30187fda34d81f9368db05c3e23a49bd5ea21aaf43aac0"
-  },
-  {
-    "_username": "org3",
-    "_password": "5906ac361a137e2d286465cd6588ebb5ac3f5ae955001100bc41577c3d751764",
-    "_email": "org3@example.com",
-    "_user_id": 3,
-    "_organizer_name": "Organizer3",
-    "_organizer_id": 102,
-    "_conference_list": [],
-    "password": "2dead1408f0040f8ae6bd30164fbc08de842675753768807d28b8af863aaaf39"
-  },
-  {
-    "_username": "org4",
-    "_password": "b97873a40f73abedd8d685a7cd5e5f85e4a9cfb83eac26886640a0813850122b",
-    "_email": "org4@example.com",
-    "_user_id": 4,
-    "_organizer_name": "Organizer4",
-    "_organizer_id": 103,
-    "_conference_list": [],
-    "password": "dbbfe1bdf377e8aebbf8eb2f5bf0ef61edb2a24b871f0bee7f423dc7ee2ffa8b"
-  },
-  {
-    "_username": "org5",
-    "_password": "8b2c86ea9cf2ea4eb517fd1e06b74f399e7fec0fef92e3b482a6cf2e2b092023",
-    "_email": "org5@example.com",
-    "_user_id": 5,
-    "_organizer_name": "Organizer5",
-    "_organizer_id": 104,
-    "_conference_list": [],
-    "password": "2ce86ea9026fbb14e33b04617146107c835e9019e3469cca336e085c5cac1092"
-  },
-  {
-    "_username": "org6",
-    "_password": "598a1a400c1dfdf36974e69d7e1bc98593f2e15015eed8e9b7e47a83b31693d5",
-    "_email": "org6@example.com",
-    "_user_id": 6,
-    "_organizer_name": "Organizer6",
-    "_organizer_id": 105,
-    "_conference_list": [],
-    "password": "37a829186f7ef65e13e25830c6be5755e32c19298e06db5f33ce705d96d9b19a"
-  },
-  {
-    "_username": "org7",
-    "_password": "5860836e8f13fc9837539a597d4086bfc0299e54ad92148d54538b5c3feefb7c",
-    "_email": "org7@example.com",
-    "_user_id": 7,
-    "_organizer_name": "Organizer7",
-    "_organizer_id": 106,
-    "_conference_list": [],
-    "password": "cdae29b07b696920fad0c14568bc298b3ebe76f7a1b0325215d7e948bb48a6e0"
-  },
-  {
-    "_username": "org8",
-    "_password": "57f3ebab63f156fd8f776ba645a55d96360a15eeffc8b0e4afe4c05fa88219aa",
-    "_email": "org8@example.com",
-    "_user_id": 8,
-    "_organizer_name": "Organizer8",
-    "_organizer_id": 107,
-    "_conference_list": [],
-    "password": "55f0f0058d70fd437ec50731883f9dd077176bbcc4ae960acf63f245580cabcf"
-  },
-  {
-    "_username": "org9",
-    "_password": "9323dd6786ebcbf3ac87357cc78ba1abfda6cf5e55cd01097b90d4a286cac90e",
-    "_email": "org9@example.com",
-    "_user_id": 9,
-    "_organizer_name": "Organizer9",
-    "_organizer_id": 108,
-    "_conference_list": [],
-    "password": "f9b55be8bebe0aa365581e5371137dc09ce2b689406878b23111afdca595f6e9"
-  },
-  {
-    "_username": "org10",
-    "_password": "aa4a9ea03fcac15b5fc63c949ac34e7b0fd17906716ac3b8e58c599cdc5a52f0",
-    "_email": "org10@example.com",
-    "_user_id": 10,
-    "_organizer_name": "Organizer10",
-    "_organizer_id": 109,
-    "_conference_list": [],
-    "password": "dd95f5bd9390e377163fdb9d3b49df336559274f41185fd89f2912083391dfa7"
-  }
+    {
+        "_username": "org1",
+        "_password": "0b14d501a594442a01c6859541bcb3e8164d183d32937b851835442f69d5c94e",
+        "_email": "org1@example.com",
+        "_user_id": 1,
+        "_organizer_name": "Organizer1",
+        "_organizer_id": 100,
+        "_conference_list": [
+        ]
+    },
+    {
+        "_username": "org2",
+        "_password": "6cf615d5bcaac778352a8f1f3360d23f02f34ec182e259897fd6ce485d7870d4",
+        "_email": "org2@example.com",
+        "_user_id": 2,
+        "_organizer_name": "Organizer2",
+        "_organizer_id": 101,
+        "_conference_list": []
+    },
+    {
+        "_username": "org3",
+        "_password": "5906ac361a137e2d286465cd6588ebb5ac3f5ae955001100bc41577c3d751764",
+        "_email": "org3@example.com",
+        "_user_id": 3,
+        "_organizer_name": "Organizer3",
+        "_organizer_id": 102,
+        "_conference_list": []
+    },
+    {
+        "_username": "org4",
+        "_password": "b97873a40f73abedd8d685a7cd5e5f85e4a9cfb83eac26886640a0813850122b",
+        "_email": "org4@example.com",
+        "_user_id": 4,
+        "_organizer_name": "Organizer4",
+        "_organizer_id": 103,
+        "_conference_list": []
+    },
+    {
+        "_username": "org5",
+        "_password": "8b2c86ea9cf2ea4eb517fd1e06b74f399e7fec0fef92e3b482a6cf2e2b092023",
+        "_email": "org5@example.com",
+        "_user_id": 5,
+        "_organizer_name": "Organizer5",
+        "_organizer_id": 104,
+        "_conference_list": []
+    },
+    {
+        "_username": "org6",
+        "_password": "598a1a400c1dfdf36974e69d7e1bc98593f2e15015eed8e9b7e47a83b31693d5",
+        "_email": "org6@example.com",
+        "_user_id": 6,
+        "_organizer_name": "Organizer6",
+        "_organizer_id": 105,
+        "_conference_list": []
+    },
+    {
+        "_username": "org7",
+        "_password": "5860836e8f13fc9837539a597d4086bfc0299e54ad92148d54538b5c3feefb7c",
+        "_email": "org7@example.com",
+        "_user_id": 7,
+        "_organizer_name": "Organizer7",
+        "_organizer_id": 106,
+        "_conference_list": []
+    },
+    {
+        "_username": "org8",
+        "_password": "57f3ebab63f156fd8f776ba645a55d96360a15eeffc8b0e4afe4c05fa88219aa",
+        "_email": "org8@example.com",
+        "_user_id": 8,
+        "_organizer_name": "Organizer8",
+        "_organizer_id": 107,
+        "_conference_list": []
+    },
+    {
+        "_username": "org9",
+        "_password": "9323dd6786ebcbf3ac87357cc78ba1abfda6cf5e55cd01097b90d4a286cac90e",
+        "_email": "org9@example.com",
+        "_user_id": 9,
+        "_organizer_name": "Organizer9",
+        "_organizer_id": 108,
+        "_conference_list": []
+    },
+    {
+        "_username": "org10",
+        "_password": "aa4a9ea03fcac15b5fc63c949ac34e7b0fd17906716ac3b8e58c599cdc5a52f0",
+        "_email": "org10@example.com",
+        "_user_id": 10,
+        "_organizer_name": "Organizer10",
+        "_organizer_id": 109,
+        "_conference_list": []
+    }
 ]

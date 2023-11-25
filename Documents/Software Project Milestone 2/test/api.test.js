@@ -1,6 +1,7 @@
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 import app from '../api.js';
+import * as classes from '../classes.js';
 
 const expect = chai.expect;
 chai.use(chaiHttp);
@@ -8,21 +9,29 @@ chai.use(chaiHttp);
 // Test the login endpoint
 describe('Login endpoint', () => {
     it('should return a valid user', async () => {
-        const res = await chai.request(app).get('/login?username=org1&password=password1');
+        const username = 'org1';
+        let password = 'password1';
+        // hash the password
+        password = classes.hashPassword(password);
+        const res = await chai.request(app).get(`/login?username=${username}&password=${password}`);
         expect(res).to.have.status(200);
         expect(res.body.valid).to.equal(true);
         expect(res.body.organizer._username).to.equal('org1');
     });
 
     it('should return an invalid user', async () => {
-        const res = await chai.request(app).get('/login?username=notorg1&password=notpassword1');
+        const username = 'org1';
+        let password = 'not the password';
+        // hash the password
+        password = classes.hashPassword(password);
+        const res = await chai.request(app).get(`/login?username=${username}&password=${password}`);
         expect(res).to.have.status(200);
         expect(res.body.valid).to.equal(false);
         expect(res.body.organizer).to.equal(null);
     });
 });
 
-// Test the conference endpoint (PUT method)
+
 describe('Conference endpoint PUT Method', () => {
     it('should return a success message', async () => {
         const res = await chai.request(app).put('/conference').send({
@@ -42,6 +51,8 @@ describe('Conference endpoint PUT Method', () => {
         expect(res.body.conferences).to.be.an('object');
     });
 });
+
+
 
 
 // Test the conference endpoint (POST method)
